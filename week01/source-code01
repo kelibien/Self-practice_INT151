@@ -1,0 +1,93 @@
+/* ตัวแปรและชนิดข้อมูล (8/8) */
+// Number
+let age = 19;
+let Std_num = 67130500022;
+console.log("Number:", age, Std_num);  
+
+// String
+let name = "Panita";
+let faculty = 'IT';
+console.log("String:", name, faculty);  
+
+// Boolean
+let TRUE = true;
+let FALSE = false;
+console.log("Boolean:", TRUE, FALSE);  
+
+// Undefined
+let notAssigned;
+console.log("Undefined:", notAssigned);  
+
+// Null
+let emptyValue = null;
+console.log("Null:", emptyValue);  
+
+// ===
+let id1 = Symbol("id");
+let id2 = Symbol("id");
+console.log("===:", id1 === id2);  
+
+/* 11/8 */
+const PI = 3.14159;
+console.log("PI =", PI);
+console.log("Type of PI is:", typeof PI);
+
+let a = 30;
+let b = 4;
+
+console.log("a + b =", a + b);
+console.log("a - b =", a - b);
+console.log("a * b =", a * b);
+console.log("a / b =", a / b);
+console.log("a % b =", a % b); //mod
+
+// String Concatenation
+let firstname = "Panita";
+let lastname = "Kawsa-ard";
+
+let MyName= "My name is " + firstname + ' ' + lastname;
+console.log(MyName);
+
+let myname = `My name is ${firstname} ${lastname}`;
+console.log(myname);
+
+// Switch Case
+let day = 3;
+let dayName;
+
+//ตรวจสอบวันในสัปดาห์ โดยถ้าเป็น 1 = Monday, 2 = Tuesday, … 7 = Sunday
+switch(day) {
+  case 1: dayName = "Monday"; break;
+  case 2: dayName = "Tuesday"; break;
+  case 3: dayName = "Wednesday"; break;
+  case 4: dayName = "Thursday"; break;
+  case 5: dayName = "Friday"; break;
+  case 6: dayName = "Saturday"; break;
+  case 7: dayName = "Sunday"; break;
+  default: dayName = "Invalid day";
+}
+console.log("Day", day, "is", dayName);
+
+/* 13/8 */
+console.log('------------')
+// While Loop
+let i = 5;
+while (i >= 1) {
+  console.log(i);
+  i--;
+}
+
+console.log('------------')
+// Do-While Loop
+let j = 1;
+do {
+  console.log(j);
+  j++;
+} while (j <= 3);
+
+console.log('------------')
+// For Loop
+for (let k = 1; k <= 5; k++) {
+  console.log(k);
+}
+
