@@ -1,0 +1,171 @@
+//16/8
+//Shallow Equality
+let book1 = {
+    isbn: 123456789,
+    title: "JavaScript",
+}
+let book2 = {
+    isbn: 123456789,
+    title: "JavaScript",
+}
+function shallowEquality(object1, object2){
+    const keys1=Object.keys(object1)
+    const keys2=Object.keys(object2)
+    if(keys1.length !== keys2.length){
+        return false
+    }
+    for(let key of keys1){
+        if(object1[key] !== object2[key] ){
+            return false
+        }
+    }
+    return true
+}
+
+console.log("shallow equality: " + shallowEquality(book1, book2)) // true
+
+// 18/8
+/*return the grade based on the score
+with the least numbers of conditional checking.
+ 
+var score = 56.45; 
+ 
+print 'A' if 80 <= score <= 100
+print 'B' if 70 <= score < 80
+print 'C' if 60 <= score < 70
+print 'D' if 50 <= score < 60
+print 'F' if 0  <= socre < 50
+print 'ERROR' if score > 100, or score < 0, or score is not a number.
+*/
+
+if (typeof score !== "number" || score > 100 || score < 0 || Number.isNaN(score)) {
+  console.log('ERROR');
+} else if (score >= 80) {
+  console.log('A');
+} else if (score >= 70) {
+  console.log('B');
+} else if (score >= 60) {
+  console.log('C');
+} else if (score >= 50) {
+  console.log('D');
+} else {
+  console.log('F');
+};
+
+/*check if n is a prime number.
+print YES if n is a prime number. Otherwise, print NO.
+the followings are not prime numbers:
+"string", "2", NaN, Infinity, -3, null, ...
+
+A prime number is a positive integer (> 1) 
+that is divisible only by 1 and itself.
+*/
+
+var n = 101;
+
+if (typeof n !== "number" || !Number.isInteger(n) || !Number.isFinite(n) || n <= 1) {
+    console.log("NO");
+} else {
+    let Prime = true;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            Prime = false;
+        break;
+        }
+  }
+  console.log(Prime ? "YES" : "NO");
+}
+
+/* write a script to print the factorial of 1 to n.
+print "ERROR" if n is not an integer or n is less than 0;
+print 0 1 if n is 0 (because 0! = 1)
+e.g.,
+1 1
+2 2
+3 6
+4 24
+...
+n n!
+*/
+var n = 6;
+ if (!Number.isInteger(n) || n < 0) {
+    console.log("ERROR")
+ } else if (n === 0) {
+    console.log("0 1")
+ } else {
+    let factorial = 1;
+    for (let i = 1;i <= n;i++) {
+        factorial *= i ;
+        console.log(i,factorial)        
+    }
+ }
+
+
+//20/8
+/*  2. count (and print) the number of vowels (i.e., 'a', 'e', 'i', 'o', 'u'; 
+case-insensitive) in a string <s>. if <s> is not a string, print "ERROR".
+Use switch-case to get full credit.
+*/
+
+var s = "Panita";
+if (typeof s !== "string") {
+    console.log("ERROR");
+} else {
+    let count = 0;
+    for (let i = 0; i < s.length; i++) {
+        switch (s[i].toLowerCase()) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        count++;
+        break;
+    }
+  }
+  console.log("vowels: " + count);
+}
+
+// challenge#1 - calculateTotalPage(Items, itemsPerPage)
+function calculateTotalPage(items,itemsPerPage){
+    if (itemsPerPage<1){
+        throw new console.error("Items per page must be greater than zero.");
+    }
+    return Math.ceil(items/itemsPerPage)
+}
+
+
+ const Std = {name:"Aticha",year:2}
+console.log(Std)
+for (const key in Std){
+    console.log(key)
+}
+
+
+const pet = {id:1, name:'yoyo'}
+console.log(pet.name)
+function doSomething(Object){
+    Object.name = 'xxx'
+}
+doSomething(pet)
+console.log(pet.name)
+
+
+const Std1 = { id: 1, name: "Somchai" }
+const Std2 = { id: 1, name: "somchai" }
+const Std3 = { id: 2, name: "Somjai" }
+function compareStd(Std1,Std2){
+    if(Std1.id === Std2.id && Std1.name.toLowerCase ===Std2.name.toLowerCase){
+        return true
+    }
+    else{ return false}
+}
+function compareStd1_3(Std1,Std3){
+    if(Std1.id === Std3.id && Std1.name.toLowerCase ===Std3.name.toLowerCase){
+        return true
+    }
+    else{ return false}
+}
+console.log(compareStd(Std1,Std2))
+console.log(compareStd1_3(Std1,Std3))
+
