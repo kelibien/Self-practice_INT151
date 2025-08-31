@@ -1,0 +1,87 @@
+// 22/8
+/* ฟังก์ชันคำนวณ BMI = น้ำหนัก(kg) / ส่วนสูง(m)^2
+รับ parameter: weight (kg), height (m)
+return: ค่า BMI */
+// function declaration
+function calculateBMI(weight, height) {
+    let bmi = weight / (height * height);
+    return bmi;
+}
+// arrow function
+const calcBMI = (weight, height) => weight / (height ** 2);
+
+console.log(calculateBMI(55, 1.60)); 
+console.log(calcBMI(70, 1.75));   
+
+/* สร้าง object เก็บข้อมูลนักเรียน เช่น ชื่อ, อายุ, คะแนน
+แล้วเขียน method ใน object เพื่อตรวจสอบว่า "สอบผ่าน" หรือไม่ (คะแนน ≥ 50) */
+let student = {
+    name: "Panita",
+    age: 21,
+    score: 72,
+    isPass: function() {
+        return this.score >= 50 ? "สอบผ่าน" : "ไม่ผ่าน";
+    }
+};
+
+console.log(student.name);     
+console.log(student["age"]);   
+console.log(student.isPass());  
+
+
+// 25/8
+/* เขียนฟังก์ชันคำนวณ BMI แล้วลองใช้ global variable และ local variable */
+let unit = "kg/m2"; 
+function calculateBMI(weight, height) {
+    let bmi = weight / (height ** 2); 
+    return bmi + " " + unit;
+}
+
+console.log(calculateBMI(50, 1.55)); 
+console.log(unit); 
+console.log(bmi);  
+
+//class work
+function getFreqOfWords(sentence) {
+  if (sentence === null || sentence === undefined) return undefined;
+ 
+  let words = sentence.toLowerCase().split(" ");
+  let freq = {};
+ 
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    freq[word] = (freq[word] || 0) + 1;
+  }
+ 
+  return freq;
+}
+
+// 28/8
+/* สร้าง object student ที่มี property: name, age, weight, height
+เขียน method getBMI() → ใช้ฟังก์ชัน arrow function คำนวณ BMI
+แล้วเขียน method checkPass() → ถ้า BMI อยู่ในช่วง 18.5–24.9 ให้แสดง "สุขภาพดี" */
+let Student = {
+    name: "Panita",
+    age: 21,
+    weight: 55,
+    height: 1.60,
+    
+    getBMI: function() {
+        const calc = (w, h) => w / (h ** 2);  
+        return calc(this.weight, this.height);
+    },
+
+    checkPass: function() {
+        let bmi = this.getBMI();
+        if (bmi >= 18.5 && bmi <= 24.9) {
+            return "สุขภาพดี";
+        } else {
+            return "ควรปรับพฤติกรรม";
+        }
+    }
+};
+
+console.log(Student.name);        
+console.log("BMI:", Student.getBMI());
+console.log(Student.checkPass());
+
