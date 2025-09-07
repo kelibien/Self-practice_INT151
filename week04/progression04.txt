@@ -1,0 +1,7 @@
+week04
+array ใน JS มันมี method เยอะมากใช้ได้หลายแบบเลย
+- push pop shift unshift เอาไว้เพิ่มหรือลบหัวท้าย
+- slice splice concat เอาไว้ตัดต่อรวม array
+- indexOf includes find ก็ไว้หาของใน array
+- ส่วน map filter reduce forEach เอาไว้วนลูปแปลงหรือเลือกค่าที่ต้องการ
+- sort reverse ก็ใช้จัดเรียง

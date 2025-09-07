@@ -1,0 +1,9 @@
+week05
+ฝึกทำโจทย์ประยุกต์ต่างๆที่อาจารย์ให้มาได้ฝึกทั้งเรื่องการเพิ่ม property ให้ object
+- การรวม object
+- เข้าใจว่าถ้ามี key ซ้ำ ค่าใน object หลังจะเขียนทับ object ก่อนหน้า
+- การนับคำใน string
+- ใช้ split(" ") แยกคำ และ toLowerCase() เพื่อ ignore case
+- การตรวจสอบ input ว่าเป็น null หรือ undefined ก่อนประมวลผล
+- การรวมและ destructure พร้อมกัน
+- การใช้ array methods แบบ chain

@@ -1,0 +1,14 @@
+Week 1
+พื้นฐาน Number กับ String ใช้เก็บตัวเลขกับข้อความ ส่วนตัวแปรที่ยังไม่ได้กำหนดค่าเป็น Undefined แต่ถ้าอยากบอกว่ามันว่างจริง ๆ ก็ใช้ Null, const คือค่าคงที่, typeof ใช้เช็คชนิดข้อมูล เวลาเอา string + number มาบวก มันก็กลายเป็น string หมดเลย เราสามารถใช้ template ${} แทรกตัวแปรใน string ได้ ส่วน switch ก็เหมือน if-else แต่ต้องใช้ break
+
+Week 2
+ฝึก loop for, while, do-while แต่ละแบบตรวจเงื่อนไขไม่เหมือนกัน ส่วน object คือเก็บข้อมูลหลาย ๆ อย่างไว้ด้วยกัน property = ตัวแปรใน object, method = ฟังก์ชันใน object ใช้ this เรียกตัวเอง เวลาเปรียบเทียบ object ต้องดูทั้ง key และ value
+
+Week 3
+เริ่มทำโจทย์ if-else, for, switch, object ฝึกฟังก์ชันธรรมดา vs arrow function Scope ของตัวแปรก็สำคัญ นอกฟังก์ชันใช้ได้ทุกที่ ในฟังก์ชันใช้ได้เฉพาะข้างใน
+
+Week 4
+Array method เยอะมาก มีทั้ง push/pop/shift/unshift เพิ่มหรือลบ, slice/splice/concat ตัดต่อรวม, indexOf/includes/find หาของ, map/filter/reduce/forEach วนหรือแปลงค่า, sort/reverse จัดเรียง
+
+Week 5
+เอาที่เรียนมาฝึกประยุกต์ เช่น เพิ่ม property ให้ object, รวม object, key ซ้ำก็ทับ, นับคำใน string ใช้ split + toLowerCase, ตรวจ null/undefined ก่อนทำงาน, ใช้ array methods แบบ chain
